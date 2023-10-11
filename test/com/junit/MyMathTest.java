@@ -6,21 +6,21 @@ import org.junit.jupiter.api.Test;
 
 class MyMathTest {
 
+	MyMath math = new MyMath();
+
 	@Test
-	void test() {
+	void calculateSumOfThreeMemberArray() {
 		// Absense of failure is success.
 		// Test conditions or Assert
 		
 		// Writing test cases for MyMath function
-		//1. Create instance of MyMath first.
-		MyMath math = new MyMath();
-		
-		int[] numbers = {1,2,3};
-		int result = math.calculateSum(numbers);
-		System.out.println(result);
-		
-		int expectedResult = 5;
-		assertEquals(expectedResult, result);
+		assertEquals(6, math.calculateSum(new int[] {1,2,3}));
 	}
 
+	@Test
+	void calculateSumOfZeroMemberArray() {
+		
+		// Writing test cases for MyMath function
+		assertEquals(0, math.calculateSum(new int[] {}));
+	}
 }
